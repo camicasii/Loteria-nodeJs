@@ -7,7 +7,7 @@ const app = express()
 
 console.log(process.env.USER_R);
 
-app.set('port', 4000)
+app.set('port',process.env.PORT|| 4000)
 app.use(morgan('dev'))
 app.use(express.json())
 app.use('/data', require('./router/index'))
