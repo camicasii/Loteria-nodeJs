@@ -2,7 +2,7 @@ const router =  require('express').Router()
 const loteria = require('../util/loteria')
 const pool = require('../database')
 
-const util =  new loteria(50,24,6,10,1000)
+const util =  new loteria(50,24,6,10,1)
 
 router.get('/ticket_generator',(req,res)=>{ 
     const tickets = util.ticketsSerializer()    

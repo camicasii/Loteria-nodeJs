@@ -11,4 +11,4 @@
 ### vende un tiket segun su id
 /seller/:ID
 ### muestra todos los boletos vendidos
-seller
+/seller

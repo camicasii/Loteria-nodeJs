@@ -1,9 +1,11 @@
+if(process.env.NODE_ENV === 'production'){ 
+    require('dotenv').config();
+    }
 const express =  require('express');
 const morgan = require('morgan')
-const mysql =  require('mysql')
-const pool = require('./database')
 const app = express()
 
+console.log(process.env.USER_R);
 
 app.set('port', 4000)
 app.use(morgan('dev'))
