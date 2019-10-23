@@ -4,9 +4,6 @@ if(process.env.NODE_ENV === 'production'){
 const express =  require('express');
 const morgan = require('morgan')
 const app = express()
-
-console.log(process.env.USER_R);
-
 app.set('port',process.env.PORT|| 4000)
 app.use(morgan('dev'))
 app.use(express.json())

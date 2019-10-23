@@ -15,7 +15,7 @@ router.get('/ticket_generator',(req,res)=>{
 })
 
 router.get('/tickets',async(req,res)=>{    
-    const tickets  = await pool.query('SELECT  FROM TICKETS WHERE SELL=FALSE');
+    const tickets  = await pool.query('SELECT * FROM TICKETS WHERE SELL=FALSE');
     res.json({
         tickets
     })    
@@ -37,7 +37,8 @@ router.get('/seller/:IDticket',async(req,res)=>{
      }     
      const check  = await pool.query('SELECT SELL FROM TICKETS WHERE ID = ? ',[id]);
      console.log(check[0].SELL);
-     if(check[0].SELL=== 0) {
+     if(check ===null|| check===undefined)
+     if(check[0].SELL=== 0 ) {
         await pool.query('INSERT INTO TICKETS_SELL set ?',[data])  .then(async res=>{
             await pool.query('UPDATE TICKETS SET SELL=TRUE WHERE  ID =?',[id])
         })
