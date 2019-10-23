@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=production nodemon node ./src/app.js",
     "estarts": "cross-env NODE_ENV=Development nodemon ./src/index.js",
-    "start":"cross-env NODE_ENV=production node ./src/index.js"
+    "start":"cross-env NODE_ENV=production node ./src/app.js"
   },
   "keywords": [],
   "author": "",
