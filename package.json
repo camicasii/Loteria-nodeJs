@@ -2,14 +2,14 @@
   "name": "loteria",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "engines": {
     "node": "12.10.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=production nodemon node ./src/app.js",
-    "start": "cross-env NODE_ENV=production node ./src/app.js"
+    "dev": "cross-env NODE_ENV=production nodemon node ./src/index.js",
+    "start": "cross-env NODE_ENV=production node ./src/index.js"
   },
   "keywords": [],
   "author": "",
