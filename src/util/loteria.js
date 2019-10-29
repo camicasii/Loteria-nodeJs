@@ -1,4 +1,4 @@
-class Lottery{    
+module.exports = class Lottery{    
     constructor(maxBall, ballSelect, winnerSing, sell, totalTicket){
         this.maxBall = maxBall
         this.ballSelect = ballSelect
@@ -97,6 +97,3 @@ ticketGenerator=()=>{
     }
 
 }
-const x = new Lottery(50,24,6,10,100)
-
-module.exports =  Lottery;

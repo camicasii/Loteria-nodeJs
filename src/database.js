@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 const {promisify} = require('util');//modulo que convierte callback en promesas
-const {remotemysql2} =require('./key');
-const pool = mysql.createPool(remotemysql2);
+const {database} =require('./key');
+const pool = mysql.createPool(database);
 
 pool.getConnection((err, connection)=>{
     if(err){

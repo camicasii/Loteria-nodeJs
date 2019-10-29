@@ -7,5 +7,11 @@ module.exports = {
         port:"3306"        
     }     ,
 
-    hola:{}
+    database :{
+        host:process.env.HOST_L,
+        user:process.env.USER_L,
+        database:"LOTERIA",
+        password:process.env.PASSWORD_L,
+        
+    }
 }
